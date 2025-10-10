@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background: linear-gradient(135deg, #f0f8ff, #a0c4ff);
+       padding: 50px ;
+       height:100vh;
+
+      }
+     .box{
+      margin-left: 500px;
+      margin-top: 100px;
+      border: 5px solid purple; 
+      padding: 40px;   
+      height: 200px;     
+      width:400px;  
+      border-radius: 15px;
+      background-color: rgb(130, 183, 228); 
+      
+
+      }
+      .game{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: purple;
+      }
+      .choose{
+        color: purple;
+        font-family: 'Press Start 2P', monospace;
+        text-align: center;
+        align-content: center;
+         font-family: 'Times New Roman', Times, serif;
+        font-size: 23px;
+
+      }
+      .choice{
+        border-radius: 5px;
+        row-gap: 20px;
+        column-gap: 10px;
+        
+       
+      }
+     .choices button{
+      color: rgb(172, 24, 172);
+      padding: 18px 18px;
+      align-items: center;
+      border-radius: 15px;
+      background-color: Neon purple;
+      gap: 15px;
+      margin-left: 18px;
+      border-color:purple;
+      border-style: double;
+      
+     }
+     #result{
+      text-align: center;
+      padding:25px;
+      font-size: 20px;
+     }
+
+    </style>
+</head>
+<body>
+  <h1 class="game">STONE PAPER SCISSOR🎮</h1>
+    <div class="box">
+    <h3 class="choose">
+        Choose your choice
+    </h3>
+    <div class="choices">
+        <button onclick="play('stone')">STONE🪨</strong></button>
+        <button onclick="play('scissor')">SCISSOR✂️</button>
+        <button onclick="play('paper')">PAPER📃</button>
+        
+    </div>
+    <div id="result" style="color: rgb(79, 4, 79);"></div>
+    </div>
+    <script>
+        function play(player){
+            const choices=['stone','paper','scissor'];
+            let computer=choices[Math.floor(Math.random()*3)];
+            let result='';
+            if(player==computer){
+                result='DRAW 🙌';
+            }else if((player ==='stone' && computer==='scissor')|| (player ==='paper'&& computer==='stone')||(player==='scissor'&& computer==='paper')){
+               result='YOU WIN😎';
+            }else{
+                result='YOU LOSE🙃';
+            }
+            document.getElementById("result").innerHTML=result;
+
+        }
+    </script>
+</body>
+</html>
