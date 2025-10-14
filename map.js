@@ -123,3 +123,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
   let name='abi';
   let age=24;
   console.log(`I am ${name} and my age ${age}`);
+
+  
