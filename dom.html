@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive Button Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            transition: color 0.3s;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #d86bff;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #87e1ff;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1 id="change">click button</h1>
-    <button onclick="changetext()">button</button>
+    <h1 id="change">Click the button</h1>
+    <button onclick="changetext()">Click Me!</button>
+
     <script>
         function changetext(){
-            document.getElementById("change").innerHTML="button clicked!"
+            const heading = document.getElementById("change");
+            heading.innerHTML = "Button Clicked!";
+            heading.style.color = "#FFD700"; 
         }
     </script>
 </body>
