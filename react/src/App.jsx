@@ -1,8 +1,33 @@
-import React from 'react'
+import React from 'react';
+import User from "./components/User";
+import {Route,Routes} from 'react-router-dom'
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import Navbar from './components/Navbar';
+import './App.css';
 
-export const App = () => {
+const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+    <Navbar/>
+    <Routes>
+      <Route path="/" Component={Home}/>
+      <Route path="/about" Component={About}/>
+      <Route path="/contact" Component={Contact}/>
+      <Route path="/services" Component={Services}/>
+      
+
+    </Routes>
+      <User 
+        name="Ragavi" 
+        dept="IT" 
+        skills={['HTML','CSS','JAVA','JS']}
+        hobbies={['Drawing','Listtening music','Playing Chess']} 
+      />
+    </>
+  );
+};
+
 export default App;
