@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Navbar from './components/Navbar';
+import State from './hooks/State';
 import './App.css';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/about" Component={About}/>
       <Route path="/contact" Component={Contact}/>
       <Route path="/services" Component={Services}/>
+      <Route path="/state" element={<State/>}/>
       
 
     </Routes>

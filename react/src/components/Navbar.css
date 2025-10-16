@@ -1,0 +1,22 @@
+.link {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around; /* space evenly between links */
+  align-items: center; /* vertically center links */
+  padding: 10px 20px;
+  color: white;
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 150px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.link a:hover {
+  background-color: white;
+  color: blueviolet;
+  border-radius: 5px;
+}
